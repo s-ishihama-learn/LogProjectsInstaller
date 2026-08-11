@@ -1,0 +1,245 @@
+--
+-- PostgreSQL database dump
+--
+
+\restrict sgI7ihCOOFKqjfmPQa5IFdlsn7Wogu6DTs3lgkhoM5XsBZ6syEcAdnhAKibKuLH
+
+-- Dumped from database version 17.6
+-- Dumped by pg_dump version 17.6
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET transaction_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Data for Name: actitem_info; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: actitem_report; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: actual_task; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: daily_report; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: info; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: m_common_task; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+INSERT INTO public.m_common_task (task_code, task_name, update_time) VALUES ('010', '社内事務', '2016-08-01 00:00:00');
+INSERT INTO public.m_common_task (task_code, task_name, update_time) VALUES ('020', '社内会議', '2016-08-01 00:00:00');
+INSERT INTO public.m_common_task (task_code, task_name, update_time) VALUES ('030', '社内研修', '2016-08-01 00:00:00');
+INSERT INTO public.m_common_task (task_code, task_name, update_time) VALUES ('040', '社外研修', '2016-08-01 00:00:00');
+INSERT INTO public.m_common_task (task_code, task_name, update_time) VALUES ('050', '来客対応', '2016-08-01 00:00:00');
+
+
+--
+-- Data for Name: m_status; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('C', '010', '未着手', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('C', '040', '対応完了', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('C', '030', '対応中', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('C', '020', '対応待ち', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('C', '050', '保留', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('D', '010', '対応なし', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('D', '020', '対応待ち', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('D', '030', '対応中', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('D', '040', '対応完了', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('E', '010', '準備中', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('E', '020', '事務処理中', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('E', '030', '未着手', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('E', '040', '指示待ち', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('E', '050', '実施中', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('E', '060', '納品待ち', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('E', '070', '検収中', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('E', '080', '完了', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('E', '090', '瑕疵対応中', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('P', '010', '準備中', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('P', '020', '開始待ち', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('P', '030', '実施中', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('P', '050', '完了', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('P', '060', '完了後対応中', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('P', '070', '瑕疵対応中', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('A', '090', 'レビュー完了', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('A', '010', '【対応者】指摘対応依頼中', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('A', '020', '【対応者】指摘対応中', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('A', '030', '【レビュー者】指摘対応確認依頼中', '2016-08-01 00:00:00');
+INSERT INTO public.m_status (kind, status_code, status_name, update_time) VALUES ('A', '040', '【レビュー者】指摘対応確認中', '2016-08-01 00:00:00');
+
+
+--
+-- Data for Name: m_type; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '040', '開発', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('B', '200', '成果物レビュー', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('C', '010', '調査         ', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('C', '020', '資料作成     ', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('C', '030', '調整         ', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('D', '010', '調査         ', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('D', '020', '調整         ', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('D', '030', '検討         ', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('D', '040', '資料作成     ', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('E', '010', '管理事務     ', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('E', '020', '契約資料作成 ', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('E', '030', '会議         ', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('E', '040', '検収作業     ', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('S', '010', '役員         ', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('S', '020', '他部署       ', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('S', '030', '自部署       ', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('S', '100', '客先（経営層）', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('S', '110', '客先（契約部門）', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('S', '120', '客先（管理職）', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('S', '130', '客先（担当者）', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('S', '200', '調達先       ', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('T', '030', '総合テスト', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('T', '010', '単体テスト', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('T', '020', '結合テスト', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('B', '010', '要件定義書レビュー', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('B', '020', '設計書レビュー', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('B', '030', 'プログラム設計書レビュー', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('B', '040', 'ソースコードレビュー', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('B', '050', 'テストコードレビュー', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('B', '100', '単体テストケースレビュー', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '300', '打合せ', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '030', 'プログラム設計', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('B', '110', '単体テスト結果レビュー', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('B', '120', '結合テストケースレビュー', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('B', '130', '結合テスト結果レビュー', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('B', '140', '総合テストケースレビュー', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('B', '150', '総合テスト結果レビュー', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '010', '要件定義書作成', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '015', '要件定義書修正', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '020', '設計書作成', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '025', '設計書修正', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '050', 'テストコード作成', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '055', 'テストコード修正', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '100', '単体テストケース作成', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '105', '単体テストケース修正', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '110', '結合テストケース作成', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '115', '結合テストケース修正', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '120', '総合テストケース作成', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '125', '総合テストケース修正', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '200', 'ドキュメント作成', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('A', '205', 'ドキュメント修正', '0', '2016-08-01 00:00:00');
+INSERT INTO public.m_type (kind, type_code, type_name, view_flag, update_time) VALUES ('T', '100', '受入テストサポート', '0', '2016-08-01 00:00:00');
+
+
+--
+-- Data for Name: m_user; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: procure_info; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: procure_report; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: project_info; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: quality_info; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: quality_report_review; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: quality_report_test; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: risk_info; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: risk_report; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: task_info; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: wbs; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: wbs_actual; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: work_content; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- Data for Name: work_detail; Type: TABLE DATA; Schema: public; Owner: prjuser
+--
+
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+\unrestrict sgI7ihCOOFKqjfmPQa5IFdlsn7Wogu6DTs3lgkhoM5XsBZ6syEcAdnhAKibKuLH
+
