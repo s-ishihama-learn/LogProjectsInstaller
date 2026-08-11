@@ -72,7 +72,6 @@ LogProjects実行環境を構築する手順は以下の通りです。
 ├── install_Ubuntu24.sh                     # インストール実行スクリプト(Ubuntu 24.04用)
 └── src/
     ├── pgdg-redhat-repo-latest.noarch.rpm  # PostgreSQLリポジトリRPM
-    ├── jdk-17.0.12_linux-x64_bin.tar.gz    # JDK 17 アーカイブ
     ├── apache-tomcat-9.0.120.tar.gz        # Tomcat 9 アーカイブ
     ├── IPAfont00303.zip                    # IPAフォントアーカイブ
     ├── LogProjects2.war                    # アプリケーションWARファイル
